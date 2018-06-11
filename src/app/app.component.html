@@ -1,0 +1,18 @@
+<ca-menu></ca-menu>
+<ca-tastiera></ca-tastiera>
+<ca-news></ca-news>
+<ca-treni></ca-treni>
+<div class="lucistanza">
+    <ul>
+        <li *ngFor="let lucisingole of lucidb" (mousedown)="onOff(lucisingole)">
+            <span *ngIf="lucisingole.stato == 'OFF'; else showluce">
+                <i class="material-icons">lightbulb_outline</i>
+                {{lucisingole.stanza}}
+            </span>
+            <ng-template #showluce>
+                <span><i class="material-icons on">lightbulb_outline</i>
+                {{lucisingole.stanza}}</span>
+            </ng-template>
+        </li>
+    </ul>
+</div>
