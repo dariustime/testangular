@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class TreniComponent implements OnInit {
 
   listametro : Metro[] = [];
+  trenoselezionato: Metro;
   now: number; 
 
   constructor() {
@@ -19,6 +20,10 @@ export class TreniComponent implements OnInit {
 
   ngOnInit() {
     this.listametro = LISTAMETRO;
+  }
+
+  setMetro(t){
+    this.trenoselezionato = t;
   }
 
 }

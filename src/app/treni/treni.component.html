@@ -1,4 +1,6 @@
 <div class="listatreni">
-  <ca-metro *ngFor="let metro of listametro" [datiIn]="metro" [ora]="now">
+  <ca-metro *ngFor="let metro of listametro" [datiIn]="metro" [ora]="now" (click)="setMetro(metro)">
   </ca-metro>
+  <!--Aggiunta componente di dettaglio-->
+  <ca-dettaglio [treno]="trenoselezionato"></ca-dettaglio>
 </div>

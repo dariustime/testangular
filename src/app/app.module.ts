@@ -8,6 +8,7 @@ import { MmssPipe } from './mmss.pipe';
 import { NewsComponent } from './news/news.component';
 import { TastieraComponent } from './tastiera/tastiera.component';
 import { MetroComponent } from './metro/metro.component';
+import { DettagliotrenoComponent } from './treni/dettagliotreno/dettagliotreno.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MetroComponent } from './metro/metro.component';
     MmssPipe,
     NewsComponent,
     TastieraComponent,
-    MetroComponent
+    MetroComponent,
+    DettagliotrenoComponent
   ],
   imports: [
     BrowserModule
