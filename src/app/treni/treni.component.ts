@@ -9,11 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TreniComponent implements OnInit {
 
-  listametro : Metro[] = [];
+  listametro : Metro[];
   trenoselezionato: Metro;
-  now: number; 
+  now: number;
+  trenipartiti: string;
 
   constructor() {
+    this.trenipartiti = '';
     this.listametro = [];
     this.now = new Date().getTime();
    }
@@ -24,6 +26,10 @@ export class TreniComponent implements OnInit {
 
   setMetro(t){
     this.trenoselezionato = t;
+  }
+
+  partiti(id:string){
+    this.trenipartiti += "|" + id;
   }
 
 }
